@@ -17,7 +17,8 @@ def delete_row():
         data = [f'{i + 1};{data[i].split(";")[1]};'
                 f'{data[i].split(";")[2]};'
                 f'{data[i].split(";")[3]};'
-                f'{data[i].split(";")[4]}'
+                f'{data[i].split(";")[4]};'
+                f'{data[i].split(";")[5]}' 
                 for i in range(len(data))]
         with open(f'db/data_{nf}.txt', 'w', encoding='utf-8') as file:
             file.writelines(data)
